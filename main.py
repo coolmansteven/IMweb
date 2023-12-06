@@ -1,5 +1,4 @@
 import streamlit as st
-import torch
 from transformers import AutoProcessor, BlipForConditionalGeneration
 from PIL import Image
 
