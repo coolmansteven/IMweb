@@ -3,12 +3,11 @@ import torch
 from transformers import AutoProcessor, BlipForConditionalGeneration
 from PIL import Image
 
-# Load my_model from the current directory on your local device
-model = torch.load('/Users/stevotrujillo/Desktop/Image Captioning/my_model')
-# Put the model into evaluation mode
-model.eval()
+# Load my_model from hugging face 
+model = BlipForConditionalGeneration.from_pretrained("StevenTrujillo/my-model")
+
 # Load the processor (working on saving my own processor)
-processor = AutoProcessor.from_pretrained("Salesforce/blip-image-captioning-large")
+processor = AutoProcessor.from_pretrained("StevenTrujillo/my-processor")
 
 # Title
 st.title("AI Club Image Captioning Model")
